@@ -22,7 +22,7 @@ if($_POST){
           <strong>Hey bird!</strong> Your post was cawed succesfully!!
         </p>
         <p>
-          Now your can see all the complains in <a href="./timeline">timeline</a>,
+          Now your can see all the complains at the <a href="./timeline">timeline</a>,
           <br/>
           you also can continue your cawing here
         </p>
