@@ -32,10 +32,6 @@
 <link rel="stylesheet" type="text/css" href="./vendor/components/font-awesome/css/font-awesome.min.css" media="all" />
 <link rel="stylesheet"type="text/css" href="<?php echo CDN_DIR;?>css/style.css"/>
 
-<?php if(rewrite(1)=='user'):?>
- <link rel="stylesheet"type="text/css" href="<?php echo CDN_DIR; ?>css/style.user.css" />
-<?php endif; ?>
-
 <style type="text/css">
   /*!
    * IE10 viewport hack for Surface/desktop Windows 8 bug

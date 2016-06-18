@@ -29,4 +29,7 @@
       </div>
     </nav>
   </body>
+  <script src="./vendor/components/jquery/jquery.min.js" type="text/javascript"></script>
+  <script src="./vendor/components/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="<?php echo CDN_DIR;?>js/events.js" type="text/javascript"></script>
 </html>

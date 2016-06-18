@@ -1,5 +1,5 @@
 <div class="vertical-center text-center">
-  <div class='jumbotron jumbotron-danger text-primary'>
+  <div class='jumbotron'>
     <img alt="<?=__APP_TITLE__?>" src="<?=CDN_DIR;?>/img/icons/twitter_square_256x256.png"/>
     <h1 class="lead">
       Oh! You're lost!
