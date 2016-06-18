@@ -4,5 +4,8 @@ This is a simple twitter-like (REST service microblogging) in some languages.
 
 NOT a big deal, its just a study-case repository, feel free to play around. :metal:
 
-## goals	&#x1f913; 	&#129299;
+>_its cold this night huh?! but I love this rain sound_ :snowflake: :umbrella: :smile:
+
+## goals
 - [ ] php app;
+- - [ ] php pure app;
