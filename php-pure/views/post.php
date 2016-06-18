@@ -6,9 +6,15 @@ if($_POST){
   $post = strip_tags($post);
   $postage = compact(['email','post']);
   // save on firebase
-  $r = $firebase->set('/posts/'.time(), $postage);
-  //sleep(1);$firebase->set('/posts/'.time(), $postage);//testing postage over time
-} ?>
+  $r = $firebase->set('/posts/'.microtime(true), $postage);
+  //usleep(1);$firebase->set('/posts/'.microtime(true), $postage);//testing postage over microtime
+
+
+
+}
+
+echo date('d-m-Y H:i:s',microtime(true));
+?>
 <div class="page-header">
   <h1>Post <small>Submit your complaint in 140 characters</small></h1>
 </div>
