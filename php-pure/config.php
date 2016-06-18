@@ -66,22 +66,17 @@ ini_set('session.cookie_lifetime',__SESSION_TIMEOUT__);
 ini_set('session.use_trans_sid',true);
 
 switch(__DNS__):
-/**
- * Production.
- */
-case 'production-url.com':
-case 'www.production-url.com':
-	define( '__ENV__', 'prod' );
-	define( '__PATH__', '/' );
-	break;
-
-/**
- * Development.
- */
-default:
-	define( '__ENV__', 'dev' );
-	define( '__PATH__','/var/www/html/'.__APP_PACKAGE__.'/application/');
-	break;
+	// prod
+	case 'production-url.com':
+	case 'www.production-url.com':
+		define( '__ENV__', 'prod' );
+		define( '__PATH__', '/');
+		break;
+	// dev
+	default:
+		define( '__ENV__', 'dev' );
+		define( '__PATH__','/twitter-like-app/php-pure/');
+		break;
 endswitch;
 
 require_once 'config.'.__APP_DATABASE__.'.php';

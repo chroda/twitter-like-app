@@ -25,7 +25,7 @@ require_once __ROOT__.'init.php';
 /**
  * Verifying the existence of the page.
  */
-if(rewrite(1) == 'user'):
+if(rewrite(1) === 'user'):
 	/**
 	 * Renders the user page.
 	 */
@@ -62,10 +62,7 @@ if(rewrite(1) == 'user'):
 			}
 		endif;
 	}
-elseif(rewrite(1)==''||rewrite(1)=='index'||rewrite(1)=='home'):
-	/**
-	 * Renders the home page.
-	 */
+elseif(rewrite(1)==''||rewrite(1)==='index'||rewrite(1)==='home'):
 	require_once(__VIEW_PATH__.'components/header.php');
 	include_once(__VIEW_PATH__.'home'.__VIEW_EXT__);
 	require_once(__VIEW_PATH__.'components/footer.php');
@@ -73,9 +70,9 @@ elseif(rewrite(1)==''||rewrite(1)=='index'||rewrite(1)=='home'):
 //	$_SESSION['user']['locale']=end(@rewrite());
 //	header('Location:'.location(removeLastCharacter(rewrite(0),'',2),true));
 elseif(array_search(rewrite(1),$_SESSION['pages'])):
-	/**
-	 * Renders page registered in the bootstrap file.
-	 */
+
+		die('aqui');
+
 	require_once(__VIEW_PATH__.'components/header.php');
 	include_once(__VIEW_PATH__.rewrite(1).__VIEW_EXT__);
 	require_once(__VIEW_PATH__.'components/footer.php');
@@ -83,22 +80,16 @@ elseif(file_exists(__VIEW_PATH__.rewrite(1).__VIEW_EXT__)):
 	/**
 	 * Renders existing file (no header and no footer).
 	 */
+
+	 	die('aqui');
 	include_once ( __VIEW_PATH__.rewrite(1).__VIEW_EXT__ );
 else:
 	/**
-	 * Check for user profile.
+	 * Renders file of error 404.
 	 */
-	$mysql->Select('user',array('username'=>strtolower(rewrite(1))));
-	if($mysql->iRecords == 1):
-		header('Location:'.location('user/'.strtolower(rewrite(1)),true));
-	else:
-		/**
-		 * Renders file of error 404.
-		 */
-		header("HTTP/1.0 404 Not Found");
-		header("Status: 404 Not Found");
-		require_once(__VIEW_PATH__.'components/header.php');
-		include_once(__VIEW_PATH__.'components/error404.php');
-		require_once(__VIEW_PATH__.'components/footer.php');
-	endif;
+	header("HTTP/1.0 404 Not Found");
+	header("Status: 404 Not Found");
+	require_once(__VIEW_CPT_PATH__.'header.php');
+	require_once(__VIEW_CPT_PATH__.'error404.php');
+	require_once(__VIEW_CPT_PATH__.'footer.php');
 endif;

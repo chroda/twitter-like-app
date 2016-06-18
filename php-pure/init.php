@@ -101,5 +101,3 @@ if(rewrite(2)=='signup'){				$seo_title = 'Registrar-se';}
 $_SESSION['seo']['title'] 	= $seo_title.__TITLE_SEP__.$_SESSION['seo']['title'];
 $_SESSION['seo']['page'] 	= $seo_title;
 isset($seo_description)?$_SESSION['seo']['description']=$seo_description:null;
-
-pr($_SESSION);
