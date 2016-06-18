@@ -13,7 +13,7 @@ ini_set("display_errors",'on');
 
 // BASICS
 define( '__APP_PACKAGE__'		,'chroda-twitter-like-app');
-define( '__APP_TITLE__'			,strtoupper(__APP_PACKAGE__));
+define( '__APP_TITLE__'			,'Grumpy Bird');
 define( '__APP_VERSION__'		,'0.1');
 define( '__APP_EMAIL__'			,'chroda@chroda.com.br');
 define( '__APP_AUTHOR__'			,'Christian Marcell (chroda) '.__APP_EMAIL__);
@@ -28,7 +28,7 @@ define( '__HERE__'				,$_SERVER['REQUEST_URI']);
 define( '__VIEW_EXT__'			,'.php');
 define( '__TPL_EXT__'			,__VIEW_EXT__);
 define( '__LOGGING__'			,true);
-define( '__SESSION_NAME__'		,strtoupper(str_replace('\'','', str_replace(' ','',(__APP_PACKAGE__.'-'.__APP_TITLE__)))));
+define( '__SESSION_NAME__'		,strtoupper(str_replace('\'','', str_replace(' ','',(__APP_PACKAGE__)))));
 define( '__SESSION_TIMEOUT__'	,3600);
 define( '__LOCALE__'			,'pt-br');
 define( '__TIMEZONE_LOCAL__'	,'America/Sao_Paulo');
@@ -56,7 +56,7 @@ mb_internal_encoding( "UTF-8" );
 // Basics Functions
 require_once __LIB_DIR__.'functions.php';
 // Specific App Functions
-if(file_exists($appFunctions = __LIB_DIR__.'functions.'.trim(strtolower(str_replace(' ','',__APP_TITLE__))).'.php')){require_once $appFunctions;}
+if(file_exists($appFunctions = __LIB_DIR__.'functions.'.trim(strtolower(str_replace(' ','',__APP_PACKAGE__))).'.php')){require_once $appFunctions;}
 
 setlocale(LC_ALL, __LOCALE__ . ".UTF-8");
 

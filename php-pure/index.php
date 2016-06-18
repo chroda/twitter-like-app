@@ -21,7 +21,6 @@ $_response = Array();
  * Initializer.
  */
 require_once __ROOT__.'init.php';
-
 /**
  * Verifying the existence of the page.
  */
