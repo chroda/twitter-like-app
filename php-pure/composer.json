@@ -1,0 +1,7 @@
+{
+    "require": {
+        "components/jquery": "^3.0",
+        "components/bootstrap": "^3.3",
+        "components/font-awesome" : "4.6"
+    }
+}
