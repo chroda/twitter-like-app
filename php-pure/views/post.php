@@ -3,8 +3,8 @@ if($_POST){
   // create vars
   extract($_POST);
   $email = strip_tags($email);
-  $post = strip_tags($post);
-  $postage = compact(['email','post']);
+  $text = strip_tags($text);
+  $postage = compact(['email','text']);
   // save on firebase
   $r = $firebase->set('/posts/'.str_replace('.','',microtime(true)), $postage);
   //usleep(1);$firebase->set('/posts/'.str_replace('.','',microtime(true)), $postage);//testing postage over time
@@ -33,7 +33,7 @@ if($_POST){
         <input required class="form-control text-center" maxlength="40" type="email" name="email" placeholder="Please tell me your email, little bird" value="<?=isset($email)?$email:null;?>">
       </div>
       <div class="form-group">
-        <textarea required class="form-control text-center" maxlength="140"  name="post" rows="1" placeholder="Start your grumpy commentary"></textarea>
+        <textarea required class="form-control text-center" maxlength="140"  name="text" rows="3" placeholder="Start your grumpy commentary"></textarea>
       </div>
       <button type="submit" class="btn btn-lg btn-block btn-info">Do a Grumpy Submit!</button>
     </form>

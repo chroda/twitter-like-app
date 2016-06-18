@@ -45,6 +45,7 @@ $_SESSION['seo'] = Array(
 $_SESSION['social'] = Array(
  'facebook' => 'https://www.facebook.com/chroda',
  'twitter' => 'https://twitter.com/_chroda',
+ 'github' => 'https://github.com/chroda',
 );
 
 /**
