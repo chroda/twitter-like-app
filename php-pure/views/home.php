@@ -1,6 +1,6 @@
 <div class="row vertical-center  text-center ">
   <div class="col-md-3">
-    <a href="#" class="btn btn-lg btn-primary">Make a post! Grr!</a>
+    <a href="./post" class="btn btn-lg btn-block btn-primary">Make a post! Grr!</a>
   </div>
   <div class="col-md-6">
     <header class='jumbotron jumbotron-primary'>
@@ -10,6 +10,6 @@
     </header>
   </div>
   <div class="col-md-3">
-    <a href="#" class="btn btn-lg btn-primary">Make a post! Grr!</a>
+    <a href="./timeline" class="btn btn-lg btn-block btn-primary">See the timeline! Humph!</a>
   </div>
 </div>
