@@ -8,11 +8,18 @@
  *
  * Setup you project in 'Production' and 'Development' enviroments.
  */
+
+ini_set("display_errors",'on');
+
 // BASICS
-define( '__APP_PACKAGE__'		,'twitter-like-app');
-define( '__APP_TITLE__'			,'LoL Collector');
+define( '__APP_PACKAGE__'		,'chroda-twitter-like-app');
+define( '__APP_TITLE__'			,strtoupper(__APP_PACKAGE__));
 define( '__APP_VERSION__'		,'0.1');
-define( '__APP_EMAIL__'			,'devnquest@gmail.com');
+define( '__APP_EMAIL__'			,'chroda@chroda.com.br');
+define( '__APP_AUTHOR__'			,'Christian Marcell (chroda) '.__APP_EMAIL__);
+//define( '__APP_DATABASE__'	,'mysql');
+define( '__APP_DATABASE__'	,'firebase');
+
 // DEFAULTS
 define( '__DEBUG__'				,true);
 define( '__DNS__'				,$_SERVER['SERVER_NAME']);
@@ -39,30 +46,31 @@ header( 'Content-Type: text/html; charset=UTF-8');
 header( 'Expires: '.date( 'D, d m Y H:i:s' ).' GMT');
 header( 'X-Powered-By: '.__APP_PACKAGE__.'/'.__APP_VERSION__ );
 header( 'X-Server-Name: '. __DNS__);
-header( 'X-Developer: Christian Marcell (chroda) <chroda@chroda.com.br>');
+header( 'X-Developer: '.__APP_AUTHOR__);
 
 date_default_timezone_set( __TIMEZONE_LOCAL__ );
 date_default_timezone_set( __TIMEZONE_TIME__ );
+
 mb_internal_encoding( "UTF-8" );
+
+// Basics Functions
 require_once __LIB_DIR__.'functions.php';
+// Specific App Functions
 if(file_exists($appFunctions = __LIB_DIR__.'functions.'.trim(strtolower(str_replace(' ','',__APP_TITLE__))).'.php')){require_once $appFunctions;}
-ini_set("display_errors",__DEBUG__);
+
 setlocale(LC_ALL, __LOCALE__ . ".UTF-8");
+
+ini_set("display_errors",__DEBUG__);
 ini_set('session.name',__SESSION_NAME__);
 ini_set('session.cookie_lifetime',__SESSION_TIMEOUT__);
 ini_set('session.use_trans_sid',true);
+
 switch(__DNS__):
 /**
  * Production.
  */
-case 	 'lolcollector.com':
-case 'www.lolcollector.com':
-case 	 'lolcollector.com.br':
-case 'www.lolcollector.com.br':
-	define('MYSQL_HOST','mysql.hostinger.com.br');
-	define('MYSQL_USER','u657450779_lolc');
-	define('MYSQL_PASS','xQ30CuUG5I');
-	define('MYSQL_NAME','u657450779_lolc');
+case 'production-url.com':
+case 'www.production-url.com':
 	define( '__ENV__', 'prod' );
 	define( '__PATH__', '/' );
 	break;
@@ -70,26 +78,14 @@ case 'www.lolcollector.com.br':
 /**
  * Development.
  */
-case 'localhost':default:
-	define('MYSQL_HOST','localhost');
-	define('MYSQL_USER','root');
-	define('MYSQL_PASS','chroda');
-	define('MYSQL_NAME','lolcollector');
+default:
 	define( '__ENV__', 'dev' );
-	define( '__PATH__',"/var/www/html/{__APP_PACKAGE__}/application/");
+	define( '__PATH__','/var/www/html/'.__APP_PACKAGE__.'/application/');
 	break;
 endswitch;
 
-define('CDN_DIR',__PATH__ .'cdn/');
-define('DATA_DIR',__PATH__ .'data/');
-define('PKG_DIR','http://'.__IP__.'/pkg/');
-include __CONTROLLERS_DIR__.'MySQL.php';
-$mysql=new MySQL;
-if($mysql->Connect()==false){ob_clean();die(include(__VIEW_CPT_PATH__.'maintenance.php'));}
-if(!isset($_COOKIE[session_name()])){$_COOKIE = array(session_name()=>'');}
-if(__DEBUG__===true && __ENV__ === 'dev'){error_reporting( E_ALL );StartTimer();}else{error_reporting(0);}
-@session_start();
+require_once 'config.'.__APP_DATABASE__.'.php';
 
-/**
- * LET'S ROCK
- */
+define('CDN_DIR',__PATH__ .'cdn/');
+
+session_start();

@@ -2,6 +2,8 @@
     "require": {
         "components/jquery": "^3.0",
         "components/bootstrap": "^3.3",
-        "components/font-awesome" : "4.6"
+        "components/font-awesome" : "4.6",
+        "kreait/firebase-php": "^0.10.0",
+        "ktamas77/firebase-php": "dev-master"
     }
 }

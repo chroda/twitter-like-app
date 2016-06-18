@@ -5,8 +5,10 @@
  * @PACKAGE		DnQ LolC
  * @SINCE		July 2013
  * @VERSION		0.1
- * 
+ *
  */
+
+//die('User.php');
 require_once(__CONTROLLERS_DIR__.'MySQL.php');
 final class User{
 	private $mysql;
@@ -64,4 +66,6 @@ final class User{
 		return $this->mysql->aArrayedResults[0]['username'];
 	}
 }
+
+pr($_SESSION);
 ?>
