@@ -18,3 +18,25 @@ NOT a big deal, its just a study-case repository, feel free to play around. :met
 > the first commit is dated in Apr 23, 2012, so its a very old code.
 >
 > But, to be a "php pure" application, I guess its okay;
+
+## Screenshots
+All screenshot pages in order of flow usage
+[ss_home]:          https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/home.png            "Screenshot Home Page"
+[ss_post]:          https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/post.png            "Screenshot Post Page Form"
+[ss_posted]:        https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/posted.png          "Screenshot Post Page After Submit"
+[ss_timeline-empty]:https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/timeline-empty.png  "Screenshot Timeline Page Empty"
+[ss_timeline]:      https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/timeline.png        "Screenshot Timeline Page With Posts"
+
+#### Home Page Screenshot
+![[alt text]()][ss_home]
+#### Post Page Screenshot
+![[alt text]()][ss_post]
+#### Posted Page Screenshot
+![[alt text]()][ss_posted]
+#### Timeline Empty Page Screenshot
+![[alt text]()][ss_timeline-empty]
+#### Timeline Page Screenshot
+![[alt text]()][ss_timeline]
+
+
+>_That's all folks!!_ :v:
