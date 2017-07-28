@@ -30,7 +30,6 @@ All screenshot pages in order of flow usage
 [ss_posted]:https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/posted.png
 
 "Screenshot Post Page After Submit"
-
 [ss_timeline-empty]:https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/timeline-empty.png  
 
 "Screenshot Timeline Page Empty"
