@@ -21,11 +21,22 @@ NOT a big deal, its just a study-case repository, feel free to play around. :met
 
 ## Screenshots
 All screenshot pages in order of flow usage
-[ss_home]:          https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/home.png            "Screenshot Home Page"
-[ss_post]:          https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/post.png            "Screenshot Post Page Form"
-[ss_posted]:        https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/posted.png          "Screenshot Post Page After Submit"
-[ss_timeline-empty]:https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/timeline-empty.png  "Screenshot Timeline Page Empty"
-[ss_timeline]:      https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/timeline.png        "Screenshot Timeline Page With Posts"
+[ss_home]:https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/home.png
+
+"Screenshot Home Page"
+[ss_post]:https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/post.png
+
+"Screenshot Post Page Form"
+[ss_posted]:        https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/posted.png
+
+"Screenshot Post Page After Submit"
+
+[ss_timeline-empty]:https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/timeline-empty.png  
+
+"Screenshot Timeline Page Empty"
+[ss_timeline]:https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/timeline.png
+
+"Screenshot Timeline Page With Posts"
 
 #### Home Page Screenshot
 ![[alt text]()][ss_home]
