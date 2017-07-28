@@ -27,7 +27,7 @@ All screenshot pages in order of flow usage
 [ss_post]:https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/post.png
 
 "Screenshot Post Page Form"
-[ss_posted]:        https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/posted.png
+[ss_posted]:https://raw.githubusercontent.com/chroda/twitter-like-app/master/php-pure/cdn/img/screenshots/posted.png
 
 "Screenshot Post Page After Submit"
 
