@@ -1,4 +1,4 @@
-# twitter-like-app :coffee: :sunglasses:
+# twitter-like-app
 
 This is a simple twitter-like (REST service microblogging) in some languages.
 
